@@ -58,6 +58,7 @@ class Build : NukeBuild
             //TestsDirectory.GlobDirectories("**/bin", "**/obj").DeleteDirectories();
             ArtifactsDirectory.CreateOrCleanDirectory();
             SourceDirectory.GlobDirectories("*/bin", "*/obj").DeleteDirectories();
+            TestsDirectory.GlobDirectories("*/bin", "*/obj").DeleteDirectories();
         });
 
     Target Restore => _ => _
