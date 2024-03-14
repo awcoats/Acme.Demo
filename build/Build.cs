@@ -18,7 +18,7 @@ using static Nuke.Common.IO.PathConstruction;
 
 [GitHubActions(
     "dotnet",
-    GitHubActionsImage.UbuntuLatest,
+    GitHubActionsImage.WindowsLatest,
     On = new[] { GitHubActionsTrigger.Push },
     InvokedTargets = new[] { nameof(Compile) })]
 
@@ -57,6 +57,7 @@ class Build : NukeBuild
             //SourceDirectory.GlobDirectories("**/bin", "**/obj").DeleteDirectories();
             //TestsDirectory.GlobDirectories("**/bin", "**/obj").DeleteDirectories();
             ArtifactsDirectory.CreateOrCleanDirectory();
+            SourceDirectory.GlobDirectories("*/bin", "*/obj").DeleteDirectories();
         });
 
     Target Restore => _ => _
@@ -64,7 +65,7 @@ class Build : NukeBuild
         .Executes(() =>
         {
           DotNetTasks.DotNetRestore();
-             
+                
         });
 
     Target Compile => _ => _

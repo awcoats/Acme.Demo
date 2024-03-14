@@ -6044,17 +6044,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\DonetArch1\\Acme.Demo\\build\\_build.csproj",
+      "projectUniqueName": "C:\\dev\\Acme.Demo\\build\\_build.csproj",
       "projectName": "_build",
-      "projectPath": "C:\\dev\\DonetArch1\\Acme.Demo\\build\\_build.csproj",
+      "projectPath": "C:\\dev\\Acme.Demo\\build\\_build.csproj",
       "packagesPath": "C:\\Users\\Andrew\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\DonetArch1\\Acme.Demo\\build\\obj\\",
+      "outputPath": "C:\\dev\\Acme.Demo\\build\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\dev\\DonetArch1\\Acme.Demo\\NuGet.Config",
+        "C:\\dev\\Acme.Demo\\NuGet.Config",
         "C:\\Users\\Andrew\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"

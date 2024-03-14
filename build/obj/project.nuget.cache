@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P3hyAwGRIHwUJke8BLohemE8VAqmiMICgWhJiPUVaD0/m3C8ZRM83bR+1voHoO/4J+5xikiehHy9O8kIhV07wQ==",
+  "dgSpecHash": "p+NNVg3dDKX12YPNfLfQUEPkm1MpPsZKd1a1aG9mDAZFPDU5GBL6c0tc6EvLJWaOBVXLt5wLYhTT1GMQC7elOw==",
   "success": true,
-  "projectFilePath": "C:\\dev\\DonetArch1\\Acme.Demo\\build\\_build.csproj",
+  "projectFilePath": "C:\\dev\\Acme.Demo\\build\\_build.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andrew\\.nuget\\packages\\azure.core\\1.36.0\\azure.core.1.36.0.nupkg.sha512",
     "C:\\Users\\Andrew\\.nuget\\packages\\azure.identity\\1.10.4\\azure.identity.1.10.4.nupkg.sha512",

@@ -1,6 +1,0 @@
-{
-  "Acme.Demo.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\dev\\DonetArch1\\Acme.Demo\\src\\Acme.Demo.Core",
-  "Acme.Demo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\dev\\DonetArch1\\Acme.Demo\\src\\Acme.Demo.Infrastructure",
-  "Acme.Demo.UseCases, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\dev\\DonetArch1\\Acme.Demo\\src\\Acme.Demo.UseCases",
-  "Acme.Demo.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\dev\\DonetArch1\\Acme.Demo\\src\\Acme.Demo.Web"
-}
