@@ -2,6 +2,6 @@
   "$schema": "./build.schema.json",
   "Solution": "Acme.Demo.sln",
   "NoLogo": true,
-  "Configuration": "Debug",
-  "Verbosity":"Minimal"
+  "Configuration": "Release",
+  "Verbosity": "Normal"
 }
