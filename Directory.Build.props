@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWarn>1591</NoWarn> <!-- Remove this to turn on warnings for missing XML Comments -->
+     <NoWarn>$(NoWarn);NETSDK1206</NoWarn> <!--  Found version-specific or distribution-specific runtime identifier(s): win7-x64, win7-x86. Affected libraries: SQLite. In .NET 8.0 and higher, assets for version-specific and distribution-specific runtime identifiers will not be found by default.-->
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,15 @@
+C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.UseCases\bin\Release\net8.0\Acme.Demo.UseCases.deps.json
+C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.UseCases\bin\Release\net8.0\Acme.Demo.UseCases.dll
+C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.UseCases\bin\Release\net8.0\Acme.Demo.UseCases.pdb
+C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.UseCases\bin\Release\net8.0\Acme.Demo.Core.dll
+C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.UseCases\bin\Release\net8.0\Acme.Demo.Core.pdb
+C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.UseCases\obj\Release\net8.0\Acme.Demo.UseCases.csproj.AssemblyReference.cache
+C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.UseCases\obj\Release\net8.0\Acme.Demo.UseCases.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.UseCases\obj\Release\net8.0\Acme.Demo.UseCases.AssemblyInfoInputs.cache
+C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.UseCases\obj\Release\net8.0\Acme.Demo.UseCases.AssemblyInfo.cs
+C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.UseCases\obj\Release\net8.0\Acme.Demo.UseCases.csproj.CoreCompileInputs.cache
+C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.UseCases\obj\Release\net8.0\Acme.Dem.053A9C0C.Up2Date
+C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.UseCases\obj\Release\net8.0\Acme.Demo.UseCases.dll
+C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.UseCases\obj\Release\net8.0\refint\Acme.Demo.UseCases.dll
+C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.UseCases\obj\Release\net8.0\Acme.Demo.UseCases.pdb
+C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.UseCases\obj\Release\net8.0\ref\Acme.Demo.UseCases.dll

@@ -1,0 +1,6 @@
+{
+  "Acme.Demo.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "~",
+  "Acme.Demo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "~",
+  "Acme.Demo.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "~",
+  "Acme.Demo.UseCases, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "~"
+}

@@ -1,0 +1,1214 @@
+2024-03-14 10:56:17.875 -06:00 [INF] Registered 5 endpoints in 113 milliseconds.
+2024-03-14 10:56:18.356 -06:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 10:56:18.410 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 10:56:18.527 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 10:56:18.568 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 10:56:18.647 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 10:56:18.656 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 10:56:18.710 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 10:56:18.713 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 10:56:18.715 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 10:56:18.717 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 7), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 10:56:18.717 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 10:56:18.734 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1 - null null
+2024-03-14 10:56:18.754 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 10:56:18.755 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 10:56:18.789 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 10:56:18.789 -06:00 [INF] Property ContributorId : 1
+2024-03-14 10:56:18.818 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 10:56:18.824 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 34 ms
+2024-03-14 10:56:18.831 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 10:56:18.833 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1 - 200 null application/json 100.5504ms
+2024-03-14 10:56:18.843 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1000 - null null
+2024-03-14 10:56:18.843 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 10:56:18.844 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 10:56:18.844 -06:00 [INF] Property ContributorId : 1000
+2024-03-14 10:56:18.846 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 10:56:18.847 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 2 ms
+2024-03-14 10:56:18.847 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 10:56:18.847 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1000 - 404 null null 4.2987ms
+2024-03-14 10:56:18.871 -06:00 [INF] Registered 5 endpoints in 18 milliseconds.
+2024-03-14 10:56:18.881 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 10:56:18.882 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 10:56:18.892 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 10:56:18.896 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 10:56:18.897 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 10:56:18.898 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 7), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 10:56:18.898 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 10:56:18.899 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors - null null
+2024-03-14 10:56:18.902 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 10:56:18.902 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-03-14 10:56:18.909 -06:00 [INF] Handling ListContributorsQuery
+2024-03-14 10:56:18.909 -06:00 [INF] Property Skip : null
+2024-03-14 10:56:18.909 -06:00 [INF] Property Take : null
+2024-03-14 10:56:18.924 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-03-14 10:56:18.926 -06:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Acme.Demo.UseCases.Contributors.ContributorDTO]] in 16 ms
+2024-03-14 10:56:18.928 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-03-14 10:56:18.928 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors - 200 null application/json 28.9321ms
+2024-03-14 12:33:39.845 -06:00 [INF] Registered 5 endpoints in 118 milliseconds.
+2024-03-14 12:33:40.317 -06:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 12:33:40.427 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 12:33:40.590 -06:00 [INF] Executed DbCommand (100ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 12:33:40.650 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 12:33:40.688 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 12:33:40.766 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 12:33:40.775 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 12:33:40.798 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1 - null null
+2024-03-14 12:33:40.818 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 12:33:40.820 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 12:33:40.853 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 12:33:40.853 -06:00 [INF] Property ContributorId : 1
+2024-03-14 12:33:40.882 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 12:33:40.887 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 34 ms
+2024-03-14 12:33:40.894 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 12:33:40.897 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1 - 200 null application/json 99.6746ms
+2024-03-14 12:33:40.907 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1000 - null null
+2024-03-14 12:33:40.908 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 12:33:40.908 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 12:33:40.909 -06:00 [INF] Property ContributorId : 1000
+2024-03-14 12:33:40.911 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 12:33:40.911 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 2 ms
+2024-03-14 12:33:40.912 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 12:33:40.912 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1000 - 404 null null 5.0114ms
+2024-03-14 12:33:40.936 -06:00 [INF] Registered 5 endpoints in 17 milliseconds.
+2024-03-14 12:33:40.945 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 12:33:40.946 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 12:33:40.961 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 12:33:40.964 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 12:33:40.965 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 12:33:40.966 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 7), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 12:33:40.966 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 12:33:40.968 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors - null null
+2024-03-14 12:33:40.970 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 12:33:40.970 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-03-14 12:33:40.977 -06:00 [INF] Handling ListContributorsQuery
+2024-03-14 12:33:40.977 -06:00 [INF] Property Skip : null
+2024-03-14 12:33:40.977 -06:00 [INF] Property Take : null
+2024-03-14 12:33:40.992 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-03-14 12:33:40.993 -06:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Acme.Demo.UseCases.Contributors.ContributorDTO]] in 16 ms
+2024-03-14 12:33:40.995 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-03-14 12:33:40.995 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors - 200 null application/json 27.7087ms
+2024-03-14 12:35:26.645 -06:00 [INF] Registered 5 endpoints in 123 milliseconds.
+2024-03-14 12:35:27.120 -06:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 12:35:27.226 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 12:35:27.281 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 12:35:27.342 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 12:35:27.378 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 12:35:27.459 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 12:35:27.468 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 12:35:27.492 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1 - null null
+2024-03-14 12:35:27.512 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 12:35:27.513 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 12:35:27.546 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 12:35:27.546 -06:00 [INF] Property ContributorId : 1
+2024-03-14 12:35:27.576 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 12:35:27.581 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 34 ms
+2024-03-14 12:35:27.587 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 12:35:27.590 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1 - 200 null application/json 98.8725ms
+2024-03-14 12:35:27.601 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1000 - null null
+2024-03-14 12:35:27.601 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 12:35:27.602 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 12:35:27.602 -06:00 [INF] Property ContributorId : 1000
+2024-03-14 12:35:27.604 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 12:35:27.605 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 2 ms
+2024-03-14 12:35:27.605 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 12:35:27.605 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1000 - 404 null null 4.0715ms
+2024-03-14 12:35:27.627 -06:00 [INF] Registered 5 endpoints in 15 milliseconds.
+2024-03-14 12:35:27.637 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 12:35:27.637 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 12:35:27.648 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 12:35:27.652 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 12:35:27.653 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 12:35:27.654 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 7), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 12:35:27.654 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 12:35:27.655 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors - null null
+2024-03-14 12:35:27.658 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 12:35:27.658 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-03-14 12:35:27.666 -06:00 [INF] Handling ListContributorsQuery
+2024-03-14 12:35:27.666 -06:00 [INF] Property Skip : null
+2024-03-14 12:35:27.666 -06:00 [INF] Property Take : null
+2024-03-14 12:35:27.681 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-03-14 12:35:27.683 -06:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Acme.Demo.UseCases.Contributors.ContributorDTO]] in 16 ms
+2024-03-14 12:35:27.685 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-03-14 12:35:27.685 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors - 200 null application/json 29.7581ms
+2024-03-14 12:53:44.855 -06:00 [INF] Registered 5 endpoints in 163 milliseconds.
+2024-03-14 12:53:45.358 -06:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 12:53:45.467 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 12:53:45.527 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 12:53:45.600 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 12:53:45.638 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 12:53:45.728 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 12:53:45.740 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 12:53:45.765 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1 - null null
+2024-03-14 12:53:45.788 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 12:53:45.790 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 12:53:45.825 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 12:53:45.825 -06:00 [INF] Property ContributorId : 1
+2024-03-14 12:53:45.856 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 12:53:45.863 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 37 ms
+2024-03-14 12:53:45.872 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 12:53:45.875 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1 - 200 null application/json 110.1781ms
+2024-03-14 12:53:45.886 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1000 - null null
+2024-03-14 12:53:45.886 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 12:53:45.887 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 12:53:45.887 -06:00 [INF] Property ContributorId : 1000
+2024-03-14 12:53:45.889 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 12:53:45.890 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 2 ms
+2024-03-14 12:53:45.890 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 12:53:45.890 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1000 - 404 null null 4.8425ms
+2024-03-14 12:53:45.915 -06:00 [INF] Registered 5 endpoints in 16 milliseconds.
+2024-03-14 12:53:45.925 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 12:53:45.925 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 12:53:45.949 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 12:53:45.954 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 12:53:45.955 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 12:53:45.956 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 7), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 12:53:45.956 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 12:53:45.957 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors - null null
+2024-03-14 12:53:45.960 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 12:53:45.960 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-03-14 12:53:45.968 -06:00 [INF] Handling ListContributorsQuery
+2024-03-14 12:53:45.968 -06:00 [INF] Property Skip : null
+2024-03-14 12:53:45.968 -06:00 [INF] Property Take : null
+2024-03-14 12:53:45.984 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-03-14 12:53:45.985 -06:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Acme.Demo.UseCases.Contributors.ContributorDTO]] in 17 ms
+2024-03-14 12:53:45.988 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-03-14 12:53:45.988 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors - 200 null application/json 30.5164ms
+2024-03-14 12:54:14.333 -06:00 [INF] Registered 5 endpoints in 137 milliseconds.
+2024-03-14 12:54:14.827 -06:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 12:54:14.934 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 12:54:14.990 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 12:54:15.051 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 12:54:15.087 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 12:54:15.168 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 12:54:15.177 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 12:54:15.200 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1 - null null
+2024-03-14 12:54:15.221 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 12:54:15.223 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 12:54:15.255 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 12:54:15.256 -06:00 [INF] Property ContributorId : 1
+2024-03-14 12:54:15.285 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 12:54:15.290 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 34 ms
+2024-03-14 12:54:15.296 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 12:54:15.299 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1 - 200 null application/json 100.1282ms
+2024-03-14 12:54:15.310 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1000 - null null
+2024-03-14 12:54:15.310 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 12:54:15.311 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 12:54:15.311 -06:00 [INF] Property ContributorId : 1000
+2024-03-14 12:54:15.313 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 12:54:15.314 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 3 ms
+2024-03-14 12:54:15.315 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 12:54:15.315 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1000 - 404 null null 5.3652ms
+2024-03-14 12:54:15.337 -06:00 [INF] Registered 5 endpoints in 15 milliseconds.
+2024-03-14 12:54:15.347 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 12:54:15.347 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 12:54:15.358 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 12:54:15.362 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 12:54:15.363 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 12:54:15.364 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 7), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 12:54:15.364 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 12:54:15.365 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors - null null
+2024-03-14 12:54:15.368 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 12:54:15.368 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-03-14 12:54:15.375 -06:00 [INF] Handling ListContributorsQuery
+2024-03-14 12:54:15.375 -06:00 [INF] Property Skip : null
+2024-03-14 12:54:15.375 -06:00 [INF] Property Take : null
+2024-03-14 12:54:15.390 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-03-14 12:54:15.392 -06:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Acme.Demo.UseCases.Contributors.ContributorDTO]] in 16 ms
+2024-03-14 12:54:15.394 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-03-14 12:54:15.394 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors - 200 null application/json 29.2118ms
+2024-03-14 13:36:58.238 -06:00 [INF] Registered 5 endpoints in 142 milliseconds.
+2024-03-14 13:36:58.753 -06:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 13:36:58.862 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 13:36:58.919 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 13:36:58.982 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 13:36:59.018 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 13:36:59.100 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 13:36:59.109 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 13:36:59.132 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1 - null null
+2024-03-14 13:36:59.152 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 13:36:59.154 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 13:36:59.188 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 13:36:59.188 -06:00 [INF] Property ContributorId : 1
+2024-03-14 13:36:59.218 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 13:36:59.223 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 34 ms
+2024-03-14 13:36:59.230 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 13:36:59.233 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1 - 200 null application/json 101.2839ms
+2024-03-14 13:36:59.243 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1000 - null null
+2024-03-14 13:36:59.243 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 13:36:59.244 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 13:36:59.244 -06:00 [INF] Property ContributorId : 1000
+2024-03-14 13:36:59.246 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 13:36:59.247 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 2 ms
+2024-03-14 13:36:59.248 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 13:36:59.248 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1000 - 404 null null 4.9197ms
+2024-03-14 13:36:59.272 -06:00 [INF] Registered 5 endpoints in 16 milliseconds.
+2024-03-14 13:36:59.282 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 13:36:59.282 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 13:36:59.294 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 13:36:59.297 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 13:36:59.299 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 13:36:59.300 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 7), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 13:36:59.300 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 13:36:59.301 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors - null null
+2024-03-14 13:36:59.304 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 13:36:59.304 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-03-14 13:36:59.310 -06:00 [INF] Handling ListContributorsQuery
+2024-03-14 13:36:59.310 -06:00 [INF] Property Skip : null
+2024-03-14 13:36:59.310 -06:00 [INF] Property Take : null
+2024-03-14 13:36:59.326 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-03-14 13:36:59.327 -06:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Acme.Demo.UseCases.Contributors.ContributorDTO]] in 16 ms
+2024-03-14 13:36:59.329 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-03-14 13:36:59.329 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors - 200 null application/json 27.8723ms
+2024-03-14 14:15:01.152 -06:00 [INF] Registered 5 endpoints in 137 milliseconds.
+2024-03-14 14:15:01.661 -06:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 14:15:01.786 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 14:15:01.846 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 14:15:01.912 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 14:15:01.961 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 14:15:02.047 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 14:15:02.058 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 14:15:02.084 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1 - null null
+2024-03-14 14:15:02.106 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 14:15:02.108 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:15:02.147 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 14:15:02.147 -06:00 [INF] Property ContributorId : 1
+2024-03-14 14:15:02.180 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 14:15:02.186 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 38 ms
+2024-03-14 14:15:02.194 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:15:02.197 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1 - 200 null application/json 113.8342ms
+2024-03-14 14:15:02.209 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1000 - null null
+2024-03-14 14:15:02.209 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:15:02.210 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 14:15:02.210 -06:00 [INF] Property ContributorId : 1000
+2024-03-14 14:15:02.212 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 14:15:02.213 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 2 ms
+2024-03-14 14:15:02.213 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:15:02.213 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1000 - 404 null null 4.7834ms
+2024-03-14 14:15:02.241 -06:00 [INF] Registered 5 endpoints in 20 milliseconds.
+2024-03-14 14:15:02.253 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 14:15:02.253 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 14:15:02.265 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 14:15:02.269 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 14:15:02.271 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 14:15:02.271 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 7), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 14:15:02.272 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 14:15:02.273 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors - null null
+2024-03-14 14:15:02.275 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 14:15:02.275 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-03-14 14:15:02.282 -06:00 [INF] Handling ListContributorsQuery
+2024-03-14 14:15:02.282 -06:00 [INF] Property Skip : null
+2024-03-14 14:15:02.282 -06:00 [INF] Property Take : null
+2024-03-14 14:15:02.299 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-03-14 14:15:02.301 -06:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Acme.Demo.UseCases.Contributors.ContributorDTO]] in 18 ms
+2024-03-14 14:15:02.303 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-03-14 14:15:02.303 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors - 200 null application/json 29.7956ms
+2024-03-14 14:17:22.127 -06:00 [INF] Registered 5 endpoints in 131 milliseconds.
+2024-03-14 14:17:22.619 -06:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 14:17:22.742 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 14:17:22.798 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 14:17:22.862 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 14:17:22.900 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 14:17:22.984 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 14:17:22.994 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 14:17:23.018 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1 - null null
+2024-03-14 14:17:23.038 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 14:17:23.039 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:17:23.074 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 14:17:23.075 -06:00 [INF] Property ContributorId : 1
+2024-03-14 14:17:23.105 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 14:17:23.110 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 35 ms
+2024-03-14 14:17:23.118 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:17:23.121 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1 - 200 null application/json 103.4312ms
+2024-03-14 14:17:23.131 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1000 - null null
+2024-03-14 14:17:23.131 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:17:23.131 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 14:17:23.132 -06:00 [INF] Property ContributorId : 1000
+2024-03-14 14:17:23.134 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 14:17:23.134 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 2 ms
+2024-03-14 14:17:23.135 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:17:23.135 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1000 - 404 null null 4.1153ms
+2024-03-14 14:17:23.157 -06:00 [INF] Registered 5 endpoints in 15 milliseconds.
+2024-03-14 14:17:23.167 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 14:17:23.168 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 14:17:23.180 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 14:17:23.184 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 14:17:23.185 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 14:17:23.186 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 7), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 14:17:23.186 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 14:17:23.187 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors - null null
+2024-03-14 14:17:23.190 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 14:17:23.190 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-03-14 14:17:23.197 -06:00 [INF] Handling ListContributorsQuery
+2024-03-14 14:17:23.197 -06:00 [INF] Property Skip : null
+2024-03-14 14:17:23.197 -06:00 [INF] Property Take : null
+2024-03-14 14:17:23.212 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-03-14 14:17:23.213 -06:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Acme.Demo.UseCases.Contributors.ContributorDTO]] in 15 ms
+2024-03-14 14:17:23.215 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-03-14 14:17:23.215 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors - 200 null application/json 27.7882ms
+2024-03-14 14:19:45.103 -06:00 [INF] Registered 5 endpoints in 124 milliseconds.
+2024-03-14 14:19:45.597 -06:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 14:19:45.709 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 14:19:45.768 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 14:19:45.831 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 14:19:45.867 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 14:19:45.947 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 14:19:45.955 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 14:19:45.978 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1 - null null
+2024-03-14 14:19:45.998 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 14:19:46.000 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:19:46.034 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 14:19:46.034 -06:00 [INF] Property ContributorId : 1
+2024-03-14 14:19:46.063 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 14:19:46.069 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 34 ms
+2024-03-14 14:19:46.075 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:19:46.078 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1 - 200 null application/json 100.3645ms
+2024-03-14 14:19:46.090 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1000 - null null
+2024-03-14 14:19:46.090 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:19:46.091 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 14:19:46.091 -06:00 [INF] Property ContributorId : 1000
+2024-03-14 14:19:46.093 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 14:19:46.094 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 2 ms
+2024-03-14 14:19:46.094 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:19:46.095 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1000 - 404 null null 4.5829ms
+2024-03-14 14:19:46.117 -06:00 [INF] Registered 5 endpoints in 15 milliseconds.
+2024-03-14 14:19:46.126 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 14:19:46.127 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 14:19:46.137 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 14:19:46.141 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 14:19:46.143 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 14:19:46.143 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 7), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 14:19:46.143 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 14:19:46.145 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors - null null
+2024-03-14 14:19:46.147 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 14:19:46.147 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-03-14 14:19:46.154 -06:00 [INF] Handling ListContributorsQuery
+2024-03-14 14:19:46.154 -06:00 [INF] Property Skip : null
+2024-03-14 14:19:46.154 -06:00 [INF] Property Take : null
+2024-03-14 14:19:46.170 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-03-14 14:19:46.171 -06:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Acme.Demo.UseCases.Contributors.ContributorDTO]] in 16 ms
+2024-03-14 14:19:46.173 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-03-14 14:19:46.173 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors - 200 null application/json 28.5663ms
+2024-03-14 14:21:21.933 -06:00 [INF] Registered 5 endpoints in 126 milliseconds.
+2024-03-14 14:21:22.424 -06:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 14:21:22.530 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 14:21:22.586 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 14:21:22.647 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 14:21:22.682 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 14:21:22.762 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 14:21:22.771 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 14:21:22.794 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1 - null null
+2024-03-14 14:21:22.814 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 14:21:22.815 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:21:22.849 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 14:21:22.850 -06:00 [INF] Property ContributorId : 1
+2024-03-14 14:21:22.879 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 14:21:22.884 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 34 ms
+2024-03-14 14:21:22.891 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:21:22.893 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1 - 200 null application/json 100.2491ms
+2024-03-14 14:21:22.904 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1000 - null null
+2024-03-14 14:21:22.904 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:21:22.905 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 14:21:22.905 -06:00 [INF] Property ContributorId : 1000
+2024-03-14 14:21:22.907 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 14:21:22.908 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 2 ms
+2024-03-14 14:21:22.908 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:21:22.908 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1000 - 404 null null 4.2644ms
+2024-03-14 14:21:22.931 -06:00 [INF] Registered 5 endpoints in 15 milliseconds.
+2024-03-14 14:21:22.940 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 14:21:22.941 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 14:21:22.951 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 14:21:22.955 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 14:21:22.956 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 14:21:22.957 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 7), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 14:21:22.957 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 14:21:22.958 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors - null null
+2024-03-14 14:21:22.961 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 14:21:22.961 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-03-14 14:21:22.968 -06:00 [INF] Handling ListContributorsQuery
+2024-03-14 14:21:22.968 -06:00 [INF] Property Skip : null
+2024-03-14 14:21:22.968 -06:00 [INF] Property Take : null
+2024-03-14 14:21:22.983 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-03-14 14:21:22.985 -06:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Acme.Demo.UseCases.Contributors.ContributorDTO]] in 16 ms
+2024-03-14 14:21:22.987 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-03-14 14:21:22.987 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors - 200 null application/json 28.9036ms
+2024-03-14 14:22:03.091 -06:00 [INF] Registered 5 endpoints in 125 milliseconds.
+2024-03-14 14:22:03.591 -06:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 14:22:03.705 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 14:22:03.762 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 14:22:03.828 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 14:22:03.867 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 14:22:03.951 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 14:22:03.961 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 14:22:03.986 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1 - null null
+2024-03-14 14:22:04.007 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 14:22:04.009 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:22:04.045 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 14:22:04.046 -06:00 [INF] Property ContributorId : 1
+2024-03-14 14:22:04.076 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 14:22:04.082 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 36 ms
+2024-03-14 14:22:04.090 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:22:04.093 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1 - 200 null application/json 107.7271ms
+2024-03-14 14:22:04.105 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1000 - null null
+2024-03-14 14:22:04.105 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:22:04.106 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 14:22:04.106 -06:00 [INF] Property ContributorId : 1000
+2024-03-14 14:22:04.108 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 14:22:04.109 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 3 ms
+2024-03-14 14:22:04.110 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:22:04.110 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1000 - 404 null null 5.1524ms
+2024-03-14 14:22:04.133 -06:00 [INF] Registered 5 endpoints in 16 milliseconds.
+2024-03-14 14:22:04.143 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 14:22:04.143 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 14:22:04.154 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 14:22:04.158 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 14:22:04.159 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 14:22:04.160 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 7), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 14:22:04.160 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 14:22:04.161 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors - null null
+2024-03-14 14:22:04.164 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 14:22:04.164 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-03-14 14:22:04.171 -06:00 [INF] Handling ListContributorsQuery
+2024-03-14 14:22:04.171 -06:00 [INF] Property Skip : null
+2024-03-14 14:22:04.171 -06:00 [INF] Property Take : null
+2024-03-14 14:22:04.187 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-03-14 14:22:04.188 -06:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Acme.Demo.UseCases.Contributors.ContributorDTO]] in 17 ms
+2024-03-14 14:22:04.190 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-03-14 14:22:04.190 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors - 200 null application/json 28.7752ms
+2024-03-14 14:31:55.289 -06:00 [INF] Registered 5 endpoints in 130 milliseconds.
+2024-03-14 14:31:55.754 -06:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 14:31:55.861 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 14:31:55.916 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 14:31:55.977 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 14:31:56.013 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 14:31:56.094 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 14:31:56.103 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 14:31:56.127 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1 - null null
+2024-03-14 14:31:56.148 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 14:31:56.150 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:31:56.185 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 14:31:56.185 -06:00 [INF] Property ContributorId : 1
+2024-03-14 14:31:56.215 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 14:31:56.220 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 35 ms
+2024-03-14 14:31:56.227 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:31:56.229 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1 - 200 null application/json 102.9795ms
+2024-03-14 14:31:56.239 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1000 - null null
+2024-03-14 14:31:56.240 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:31:56.240 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 14:31:56.241 -06:00 [INF] Property ContributorId : 1000
+2024-03-14 14:31:56.243 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 14:31:56.244 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 2 ms
+2024-03-14 14:31:56.244 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:31:56.244 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1000 - 404 null null 4.6228ms
+2024-03-14 14:31:56.266 -06:00 [INF] Registered 5 endpoints in 15 milliseconds.
+2024-03-14 14:31:56.276 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 14:31:56.276 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 14:31:56.287 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 14:31:56.291 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 14:31:56.292 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 14:31:56.293 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 7), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 14:31:56.293 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 14:31:56.294 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors - null null
+2024-03-14 14:31:56.297 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 14:31:56.297 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-03-14 14:31:56.304 -06:00 [INF] Handling ListContributorsQuery
+2024-03-14 14:31:56.304 -06:00 [INF] Property Skip : null
+2024-03-14 14:31:56.304 -06:00 [INF] Property Take : null
+2024-03-14 14:31:56.319 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-03-14 14:31:56.320 -06:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Acme.Demo.UseCases.Contributors.ContributorDTO]] in 16 ms
+2024-03-14 14:31:56.322 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-03-14 14:31:56.322 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors - 200 null application/json 27.7914ms
+2024-03-14 14:32:40.120 -06:00 [INF] Registered 5 endpoints in 138 milliseconds.
+2024-03-14 14:32:40.631 -06:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 14:32:40.741 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 14:32:40.797 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 14:32:40.858 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 14:32:40.897 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 14:32:40.989 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 14:32:40.998 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2024-03-14 14:32:41.021 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1 - null null
+2024-03-14 14:32:41.041 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 14:32:41.042 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:32:41.076 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 14:32:41.076 -06:00 [INF] Property ContributorId : 1
+2024-03-14 14:32:41.106 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 14:32:41.112 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 35 ms
+2024-03-14 14:32:41.119 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:32:41.122 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1 - 200 null application/json 101.1801ms
+2024-03-14 14:32:41.132 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1000 - null null
+2024-03-14 14:32:41.133 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:32:41.134 -06:00 [INF] Handling GetContributorQuery
+2024-03-14 14:32:41.134 -06:00 [INF] Property ContributorId : 1000
+2024-03-14 14:32:41.136 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__contributorId_0
+LIMIT 1
+2024-03-14 14:32:41.137 -06:00 [INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 2 ms
+2024-03-14 14:32:41.137 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+2024-03-14 14:32:41.137 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1000 - 404 null null 4.9072ms
+2024-03-14 14:32:41.160 -06:00 [INF] Registered 5 endpoints in 16 milliseconds.
+2024-03-14 14:32:41.170 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-03-14 14:32:41.170 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2024-03-14 14:32:41.182 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2024-03-14 14:32:41.186 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2024-03-14 14:32:41.187 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+FROM "Contributors" AS "c"
+2024-03-14 14:32:41.188 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 7), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 14:32:41.188 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Id", "Name", "Status")
+VALUES (@p0, @p1, @p2);
+2024-03-14 14:32:41.189 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost/Contributors - null null
+2024-03-14 14:32:41.192 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-03-14 14:32:41.192 -06:00 [INF] Executing endpoint 'HTTP: GET /Contributors'
+2024-03-14 14:32:41.199 -06:00 [INF] Handling ListContributorsQuery
+2024-03-14 14:32:41.199 -06:00 [INF] Property Skip : null
+2024-03-14 14:32:41.199 -06:00 [INF] Property Take : null
+2024-03-14 14:32:41.215 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+2024-03-14 14:32:41.216 -06:00 [INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Acme.Demo.UseCases.Contributors.ContributorDTO]] in 17 ms
+2024-03-14 14:32:41.219 -06:00 [INF] Executed endpoint 'HTTP: GET /Contributors'
+2024-03-14 14:32:41.219 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost/Contributors - 200 null application/json 29.5639ms

@@ -1,0 +1,266 @@
+V |                      | ArgumentsFromParametersFile.OnBuildCreated (150)
+V |                      | Passing value for <unresolved> (Acme.Demo.sln)
+V |                      | Passing value for NukeBuild.NoLogo (True)
+V |                      | Passing value for Build.Configuration (Debug)
+V |                      | Passing value for NukeBuild.Verbosity (Minimal)
+V |                      | HandleReSharperSurrogateArguments.OnBuildCreated (150)
+V |                      | InjectParameterValues.OnBuildCreated (100)
+V |                      | HandleShellCompletion.OnBuildCreated (75)
+V |                      | GenerateBuildServerConfigurations.OnBuildCreated (50)
+V |                      | InvokeBuildServerConfigurationGeneration.OnBuildCreated (45)
+V |                      | UpdateNotification.OnBuildCreated (10)
+V |                      | UnsetVisualStudioEnvironmentVariables.OnBuildCreated (0)
+V |                      | HandleVisualStudioDebugging.OnBuildCreated (0)
+V |                      | EventInvoker.OnBuildCreated (-3.4028235E+38)
+V |                      | HandlePlanRequests.OnBuildInitialized (10)
+V |                      | HandleHelpRequests.OnBuildInitialized (5)
+V |                      | Telemetry.OnBuildInitialized (0)
+V |                      | Sending BuildStarted telemetry event ...
+V |                      |   build_components         = 
+V |                      |   build_type               = Project
+V |                      |   compile_time             = 3
+V |                      |   config_generators        = 
+V |                      |   host                     = Terminal
+V |                      |   num_custom_components    = 0
+V |                      |   num_custom_extensions    = 0
+V |                      |   num_partitioned_targets  = 0
+V |                      |   num_secrets              = 0
+V |                      |   num_targets              = 5
+V |                      |   os_architecture          = X64
+V |                      |   os_platform              = Windows
+V |                      |   target_framework         = .NETCoreApp,Version=v8.0
+V |                      |   version_dotnet_sdk       = 8.0.200
+V |                      |   version_nuke_common      = 8.0.0
+V |                      |   version_nuke_global_tool = 8.0.0
+V |                      | InjectNonParameterValues.OnBuildInitialized (-100)
+V |                      | EventInvoker.OnBuildInitialized (-3.4028235E+38)
+V | Clean                | EventInvoker.OnTargetRunning (-3.4028235E+38)
+I | Clean                | Host:Nuke.Common.Execution.Terminal
+I | Clean                | IsLocalBuild:True
+I | Clean                | IsServerBuild:False
+I | Clean                | > "C:\Program Files\dotnet\dotnet.exe" clean
+V | Clean                | @ C:\dev\DonetArch1\Acme.Demo
+D | Clean                | MSBuild version 17.9.4+90725d08d for .NET
+D | Clean                | Build started 3/14/2024 2:21:13 PM.
+D | Clean                |      1>Project "C:\dev\DonetArch1\Acme.Demo\Acme.Demo.sln" on node 1 (Clean target(s)).
+D | Clean                |      1>ValidateSolutionConfiguration:
+D | Clean                |          Building solution configuration "Debug|Any CPU".
+D | Clean                |        ValidateProjects:
+D | Clean                |          The project "_build" is not selected for building in solution configuration "Debug|Any CPU".
+D | Clean                |      1>Done Building Project "C:\dev\DonetArch1\Acme.Demo\Acme.Demo.sln" (Clean target(s)).
+D | Clean                | 
+D | Clean                | Build succeeded.
+D | Clean                |     0 Warning(s)
+D | Clean                |     0 Error(s)
+D | Clean                | 
+D | Clean                | Time Elapsed 00:00:00.71
+V | Clean                | Telemetry.OnTargetSucceeded (0)
+V | Clean                | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+V | Restore              | EventInvoker.OnTargetRunning (-3.4028235E+38)
+I | Restore              | > "C:\Program Files\dotnet\dotnet.exe" restore
+V | Restore              | @ C:\dev\DonetArch1\Acme.Demo
+D | Restore              |   Determining projects to restore...
+D | Restore              |   All projects are up-to-date for restore.
+V | Restore              | Telemetry.OnTargetSucceeded (0)
+V | Restore              | Sending TargetSucceeded telemetry event ...
+V | Restore              |   build_components         = 
+V | Restore              |   build_type               = Project
+V | Restore              |   compile_time             = 5
+V | Restore              |   config_generators        = 
+V | Restore              |   host                     = Terminal
+V | Restore              |   num_custom_components    = 0
+V | Restore              |   num_custom_extensions    = 0
+V | Restore              |   num_partitioned_targets  = 0
+V | Restore              |   num_secrets              = 0
+V | Restore              |   num_targets              = 5
+V | Restore              |   os_architecture          = X64
+V | Restore              |   os_platform              = Windows
+V | Restore              |   target_current_partition = 1
+V | Restore              |   target_duration          = 1
+V | Restore              |   target_framework         = .NETCoreApp,Version=v8.0
+V | Restore              |   target_name              = Restore
+V | Restore              |   target_total_partitions  = 1
+V | Restore              |   version_dotnet_sdk       = 8.0.200
+V | Restore              |   version_nuke_common      = 8.0.0
+V | Restore              |   version_nuke_global_tool = 8.0.0
+V | Restore              | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+V | Compile              | EventInvoker.OnTargetRunning (-3.4028235E+38)
+I | Compile              | Compile!!!
+I | Compile              | > "C:\Program Files\dotnet\dotnet.exe" build
+V | Compile              | @ C:\dev\DonetArch1\Acme.Demo
+D | Compile              | MSBuild version 17.9.4+90725d08d for .NET
+D | Compile              |   Determining projects to restore...
+D | Compile              |   All projects are up-to-date for restore.
+D | Compile              |   Acme.Demo.Core -> C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.Core\bin\Debug\net8.0\Acme.Demo.Core.dll
+D | Compile              |   Acme.Demo.UseCases -> C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.UseCases\bin\Debug\net8.0\Acme.Demo.UseCases.dll
+D | Compile              |   Acme.Demo.Infrastructure -> C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.Infrastructure\bin\Debug\net8.0\Acme.Demo.Infrastructure.dll
+D | Compile              |   Acme.Demo.UnitTests -> C:\dev\DonetArch1\Acme.Demo\tests\Acme.Demo.UnitTests\bin\Debug\net8.0\Acme.Demo.UnitTests.dll
+D | Compile              |   Acme.Demo.Web -> C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.Web\bin\Debug\net8.0\Acme.Demo.Web.dll
+D | Compile              |   Acme.Demo.IntegrationTests -> C:\dev\DonetArch1\Acme.Demo\tests\Acme.Demo.IntegrationTests\bin\Debug\net8.0\Acme.Demo.IntegrationTests.dll
+D | Compile              |   Acme.Demo.FunctionalTests -> C:\dev\DonetArch1\Acme.Demo\tests\Acme.Demo.FunctionalTests\bin\Debug\net8.0\Acme.Demo.FunctionalTests.dll
+D | Compile              | 
+D | Compile              | Build succeeded.
+D | Compile              |     0 Warning(s)
+D | Compile              |     0 Error(s)
+D | Compile              | 
+D | Compile              | Time Elapsed 00:00:02.72
+V | Compile              | Telemetry.OnTargetSucceeded (0)
+V | Compile              | Sending TargetSucceeded telemetry event ...
+V | Compile              |   build_components         = 
+V | Compile              |   build_type               = Project
+V | Compile              |   compile_time             = 8
+V | Compile              |   config_generators        = 
+V | Compile              |   host                     = Terminal
+V | Compile              |   num_custom_components    = 0
+V | Compile              |   num_custom_extensions    = 0
+V | Compile              |   num_partitioned_targets  = 0
+V | Compile              |   num_secrets              = 0
+V | Compile              |   num_targets              = 5
+V | Compile              |   os_architecture          = X64
+V | Compile              |   os_platform              = Windows
+V | Compile              |   target_current_partition = 1
+V | Compile              |   target_duration          = 3
+V | Compile              |   target_framework         = .NETCoreApp,Version=v8.0
+V | Compile              |   target_name              = Compile
+V | Compile              |   target_total_partitions  = 1
+V | Compile              |   version_dotnet_sdk       = 8.0.200
+V | Compile              |   version_nuke_common      = 8.0.0
+V | Compile              |   version_nuke_global_tool = 8.0.0
+V | Compile              | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+V | UnitTest             | EventInvoker.OnTargetRunning (-3.4028235E+38)
+I | UnitTest             | > "C:\Program Files\dotnet\dotnet.exe" test
+V | UnitTest             | @ C:\dev\DonetArch1\Acme.Demo
+D | UnitTest             |   Determining projects to restore...
+D | UnitTest             |   All projects are up-to-date for restore.
+D | UnitTest             |   Acme.Demo.Core -> C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.Core\bin\Debug\net8.0\Acme.Demo.Core.dll
+D | UnitTest             |   Acme.Demo.UseCases -> C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.UseCases\bin\Debug\net8.0\Acme.Demo.UseCases.dll
+D | UnitTest             |   Acme.Demo.Infrastructure -> C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.Infrastructure\bin\Debug\net8.0\Acme.Demo.Infrastructure.dll
+D | UnitTest             |   Acme.Demo.UnitTests -> C:\dev\DonetArch1\Acme.Demo\tests\Acme.Demo.UnitTests\bin\Debug\net8.0\Acme.Demo.UnitTests.dll
+D | UnitTest             | Test run for C:\dev\DonetArch1\Acme.Demo\tests\Acme.Demo.UnitTests\bin\Debug\net8.0\Acme.Demo.UnitTests.dll (.NETCoreApp,Version=v8.0)
+D | UnitTest             | Microsoft (R) Test Execution Command Line Tool Version 17.9.0 (x64)
+D | UnitTest             | Copyright (c) Microsoft Corporation.  All rights reserved.
+D | UnitTest             | 
+D | UnitTest             | Starting test execution, please wait...
+D | UnitTest             | A total of 1 test files matched the specified pattern.
+D | UnitTest             |   Acme.Demo.Web -> C:\dev\DonetArch1\Acme.Demo\src\Acme.Demo.Web\bin\Debug\net8.0\Acme.Demo.Web.dll
+D | UnitTest             |   Acme.Demo.FunctionalTests -> C:\dev\DonetArch1\Acme.Demo\tests\Acme.Demo.FunctionalTests\bin\Debug\net8.0\Acme.Demo.FunctionalTests.dll
+D | UnitTest             | Test run for C:\dev\DonetArch1\Acme.Demo\tests\Acme.Demo.FunctionalTests\bin\Debug\net8.0\Acme.Demo.FunctionalTests.dll (.NETCoreApp,Version=v8.0)
+D | UnitTest             | Microsoft (R) Test Execution Command Line Tool Version 17.9.0 (x64)
+D | UnitTest             | Copyright (c) Microsoft Corporation.  All rights reserved.
+D | UnitTest             | 
+D | UnitTest             | 
+D | UnitTest             | Passed!  - Failed:     0, Passed:     3, Skipped:     0, Total:     3, Duration: 19 ms - Acme.Demo.UnitTests.dll (net8.0)
+D | UnitTest             | Starting test execution, please wait...
+D | UnitTest             | A total of 1 test files matched the specified pattern.
+D | UnitTest             |   Acme.Demo.IntegrationTests -> C:\dev\DonetArch1\Acme.Demo\tests\Acme.Demo.IntegrationTests\bin\Debug\net8.0\Acme.Demo.IntegrationTests.dll
+D | UnitTest             | Test run for C:\dev\DonetArch1\Acme.Demo\tests\Acme.Demo.IntegrationTests\bin\Debug\net8.0\Acme.Demo.IntegrationTests.dll (.NETCoreApp,Version=v8.0)
+D | UnitTest             | Microsoft (R) Test Execution Command Line Tool Version 17.9.0 (x64)
+D | UnitTest             | Copyright (c) Microsoft Corporation.  All rights reserved.
+D | UnitTest             | 
+D | UnitTest             | Starting test execution, please wait...
+D | UnitTest             | A total of 1 test files matched the specified pattern.
+D | UnitTest             | [14:21:21 INF] Starting web host
+D | UnitTest             | [14:21:21 INF] Infrastructure services registered
+D | UnitTest             | [14:21:21 INF] Registered 5 endpoints in 126 milliseconds.
+D | UnitTest             | [14:21:22 INF] Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+D | UnitTest             | SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+D | UnitTest             | [14:21:22 INF] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+D | UnitTest             | SELECT EXISTS (
+D | UnitTest             |     SELECT 1
+D | UnitTest             |     FROM "Contributors" AS "c")
+D | UnitTest             | [14:21:22 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+D | UnitTest             | PRAGMA journal_mode = 'wal';
+D | UnitTest             | [14:21:22 INF] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+D | UnitTest             | CREATE TABLE "Contributors" (
+D | UnitTest             |     "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+D | UnitTest             |     "Name" TEXT NOT NULL,
+D | UnitTest             |     "Status" INTEGER NOT NULL,
+D | UnitTest             |     "PhoneNumber_CountryCode" TEXT NULL,
+D | UnitTest             |     "PhoneNumber_Number" TEXT NULL,
+D | UnitTest             |     "PhoneNumber_Extension" TEXT NULL
+D | UnitTest             | );
+D | UnitTest             | [14:21:22 INF] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+D | UnitTest             | SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+D | UnitTest             | FROM "Contributors" AS "c"
+D | UnitTest             | 
+D | UnitTest             | Passed!  - Failed:     0, Passed:     3, Skipped:     0, Total:     3, Duration: 56 ms - Acme.Demo.IntegrationTests.dll (net8.0)
+D | UnitTest             | [14:21:22 INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+D | UnitTest             | INSERT INTO "Contributors" ("Name", "Status")
+D | UnitTest             | VALUES (@p0, @p1)
+D | UnitTest             | RETURNING "Id";
+D | UnitTest             | [14:21:22 INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+D | UnitTest             | INSERT INTO "Contributors" ("Name", "Status")
+D | UnitTest             | VALUES (@p0, @p1)
+D | UnitTest             | RETURNING "Id";
+D | UnitTest             | [14:21:22 INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1 - null null
+D | UnitTest             | [14:21:22 WRN] Failed to determine the https port for redirect.
+D | UnitTest             | [14:21:22 INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+D | UnitTest             | [14:21:22 INF] Handling GetContributorQuery
+D | UnitTest             | [14:21:22 INF] Property ContributorId : 1
+D | UnitTest             | [14:21:22 INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+D | UnitTest             | SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+D | UnitTest             | FROM "Contributors" AS "c"
+D | UnitTest             | WHERE "c"."Id" = @__contributorId_0
+D | UnitTest             | LIMIT 1
+D | UnitTest             | [14:21:22 INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 34 ms
+D | UnitTest             | [14:21:22 INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+D | UnitTest             | [14:21:22 INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1 - 200 null application/json 100.2491ms
+D | UnitTest             | [14:21:22 INF] Request starting HTTP/1.1 GET http://localhost/Contributors/1000 - null null
+D | UnitTest             | [14:21:22 INF] Executing endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+D | UnitTest             | [14:21:22 INF] Handling GetContributorQuery
+D | UnitTest             | [14:21:22 INF] Property ContributorId : 1000
+D | UnitTest             | [14:21:22 INF] Executed DbCommand (0ms) [Parameters=[@__contributorId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+D | UnitTest             | SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+D | UnitTest             | FROM "Contributors" AS "c"
+D | UnitTest             | WHERE "c"."Id" = @__contributorId_0
+D | UnitTest             | LIMIT 1
+D | UnitTest             | [14:21:22 INF] Handled GetContributorQuery with Ardalis.Result.Result`1[Acme.Demo.UseCases.Contributors.ContributorDTO] in 2 ms
+D | UnitTest             | [14:21:22 INF] Executed endpoint 'HTTP: GET /Contributors/{ContributorId:int}'
+D | UnitTest             | [14:21:22 INF] Request finished HTTP/1.1 GET http://localhost/Contributors/1000 - 404 null null 4.2644ms
+D | UnitTest             | [14:21:22 INF] Starting web host
+D | UnitTest             | [14:21:22 INF] Infrastructure services registered
+D | UnitTest             | [14:21:22 INF] Registered 5 endpoints in 15 milliseconds.
+D | UnitTest             | [14:21:22 INF] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+D | UnitTest             | SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+D | UnitTest             | [14:21:22 INF] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+D | UnitTest             | SELECT EXISTS (
+D | UnitTest             |     SELECT 1
+D | UnitTest             |     FROM "Contributors" AS "c")
+D | UnitTest             | [14:21:22 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+D | UnitTest             | PRAGMA journal_mode = 'wal';
+D | UnitTest             | [14:21:22 INF] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+D | UnitTest             | CREATE TABLE "Contributors" (
+D | UnitTest             |     "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+D | UnitTest             |     "Name" TEXT NOT NULL,
+D | UnitTest             |     "Status" INTEGER NOT NULL,
+D | UnitTest             |     "PhoneNumber_CountryCode" TEXT NULL,
+D | UnitTest             |     "PhoneNumber_Number" TEXT NULL,
+D | UnitTest             |     "PhoneNumber_Extension" TEXT NULL
+D | UnitTest             | );
+D | UnitTest             | [14:21:22 INF] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+D | UnitTest             | SELECT "c"."Id", "c"."Name", "c"."Status", "c"."PhoneNumber_CountryCode", "c"."PhoneNumber_Extension", "c"."PhoneNumber_Number"
+D | UnitTest             | FROM "Contributors" AS "c"
+D | UnitTest             | [14:21:22 INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 7), @p2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+D | UnitTest             | INSERT INTO "Contributors" ("Id", "Name", "Status")
+D | UnitTest             | VALUES (@p0, @p1, @p2);
+D | UnitTest             | [14:21:22 INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8), @p2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+D | UnitTest             | INSERT INTO "Contributors" ("Id", "Name", "Status")
+D | UnitTest             | VALUES (@p0, @p1, @p2);
+D | UnitTest             | [14:21:22 INF] Request starting HTTP/1.1 GET http://localhost/Contributors - null null
+D | UnitTest             | [14:21:22 WRN] Failed to determine the https port for redirect.
+D | UnitTest             | [14:21:22 INF] Executing endpoint 'HTTP: GET /Contributors'
+D | UnitTest             | [14:21:22 INF] Handling ListContributorsQuery
+D | UnitTest             | [14:21:22 INF] Property Skip : null
+D | UnitTest             | [14:21:22 INF] Property Take : null
+D | UnitTest             | [14:21:22 INF] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+D | UnitTest             | SELECT Id, Name, PhoneNumber_Number AS PhoneNumber FROM Contributors
+D | UnitTest             | [14:21:22 INF] Handled ListContributorsQuery with Ardalis.Result.Result`1[System.Collections.Generic.IEnumerable`1[Acme.Demo.UseCases.Contributors.ContributorDTO]] in 16 ms
+D | UnitTest             | [14:21:22 INF] Executed endpoint 'HTTP: GET /Contributors'
+D | UnitTest             | [14:21:22 INF] Request finished HTTP/1.1 GET http://localhost/Contributors - 200 null application/json 28.9036ms
+D | UnitTest             | 
+D | UnitTest             | Passed!  - Failed:     0, Passed:     3, Skipped:     0, Total:     3, Duration: 87 ms - Acme.Demo.FunctionalTests.dll (net8.0)
+V | UnitTest             | Telemetry.OnTargetSucceeded (0)
+V | UnitTest             | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+V |                      | UpdateNotification.OnBuildFinished (10)
+V |                      | SerializeBuildServerState.OnBuildFinished (0)
+V |                      | EventInvoker.OnBuildFinished (-3.4028235E+38)
